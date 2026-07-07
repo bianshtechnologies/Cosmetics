@@ -137,7 +137,7 @@ export const CatalogPage: React.FC = () => {
         </div>
 
         {/* Main Body Grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: filtersOpen ? '280px 1fr' : '1fr', gap: '40px', transition: 'grid-template-columns 0.3s' }}>
+        <div className="responsive-sidebar-layout" style={{ gridTemplateColumns: filtersOpen ? undefined : '1fr', transition: 'grid-template-columns 0.3s' }}>
           {/* Sidebar Filters */}
           <AnimatePresence>
             {filtersOpen && (

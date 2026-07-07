@@ -126,7 +126,7 @@ export const AdminDashboard: React.FC = () => {
 
   return (
     <div style={{ paddingTop: '100px', minHeight: '100vh', paddingBottom: '50px' }}>
-      <div className="luxury-container" style={{ display: 'grid', gridTemplateColumns: '260px 1fr', gap: '40px' }}>
+      <div className="luxury-container responsive-sidebar-layout">
         {/* Sidebar Nav */}
         <aside className="glass-card" style={{ padding: '24px', display: 'flex', flexDirection: 'column', gap: '20px' }}>
           <div>

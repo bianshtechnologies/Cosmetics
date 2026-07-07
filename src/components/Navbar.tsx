@@ -67,7 +67,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onCartOpen }) => {
     >
       <div className="luxury-container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         {/* Left Links */}
-        <nav style={{ display: 'flex', gap: '30px', alignItems: 'center' }}>
+        <nav className="responsive-navbar-nav">
           <Link to="/catalog" className="nav-link" style={{ fontSize: '13px', textTransform: 'uppercase', letterSpacing: '0.15em', fontWeight: 500, color: 'var(--text)' }}>
             Shop
           </Link>

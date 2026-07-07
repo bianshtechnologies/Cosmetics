@@ -58,7 +58,7 @@ export const AboutPage: React.FC = () => {
       </section>
 
       {/* Founder Profile Section */}
-      <section className="luxury-container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '60px', alignItems: 'center', marginBottom: '100px' }}>
+      <section className="luxury-container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '60px', alignItems: 'center', marginBottom: '100px' }}>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
           <span style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--accent-dark)', fontWeight: 600 }}>FOUNDER PORTRAIT</span>
           <h2 style={{ fontSize: '32px', fontFamily: 'var(--font-serif)' }}>Valerie de Dior</h2>
@@ -113,7 +113,7 @@ export const AboutPage: React.FC = () => {
           <span style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.15em', color: 'var(--accent-dark)', fontWeight: 600 }}>INGREDIENT DICTIONARY</span>
           <h2 style={{ fontSize: '32px', fontFamily: 'var(--font-serif)', marginTop: '8px' }}>Active Molecular Compounds</h2>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '40px', alignItems: 'flex-start' }}>
+        <div className="responsive-double-grid" style={{ alignItems: 'flex-start', gap: '40px' }}>
           {/* List */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             {ingredientsList.map((ing, idx) => (

@@ -89,7 +89,7 @@ export const CheckoutPage: React.FC = () => {
           </div>
         )}
 
-        <div style={{ display: 'grid', gridTemplateColumns: step === 'success' ? '1fr' : '1.5fr 1fr', gap: '50px', alignItems: 'start' }}>
+        <div className="checkout-grid" style={{ gridTemplateColumns: step === 'success' ? '1fr' : undefined, alignItems: 'start' }}>
           {/* LEFT: Flow forms */}
           {step !== 'success' && (
             <div className="glass-card" style={{ padding: '30px' }}>

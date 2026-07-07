@@ -107,7 +107,7 @@ export const ProfilePage: React.FC = () => {
 
   return (
     <div style={{ paddingTop: '120px', paddingBottom: '100px' }}>
-      <div className="luxury-container" style={{ display: 'grid', gridTemplateColumns: '260px 1fr', gap: '50px', alignItems: 'start' }}>
+      <div className="luxury-container responsive-sidebar-layout" style={{ alignItems: 'start' }}>
         {/* Sidebar Nav */}
         <aside className="glass-card" style={{ padding: '24px', display: 'flex', flexDirection: 'column', gap: '20px' }}>
           <div>

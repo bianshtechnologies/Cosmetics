@@ -42,7 +42,7 @@ export const HomePage: React.FC = () => {
 
       {/* HERO SECTION */}
       <section style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', paddingTop: '100px', paddingBottom: '50px' }}>
-        <div className="luxury-container" style={{ width: '100%', display: 'grid', gridTemplateColumns: '1fr 1fr', alignItems: 'center', gap: '40px' }}>
+        <div className="luxury-container responsive-hero-grid" style={{ width: '100%' }}>
           {/* Left Hero Content */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', border: '1px solid var(--accent)', padding: '6px 14px', borderRadius: '30px', width: 'fit-content', background: 'rgba(231, 201, 169, 0.1)' }}>
@@ -183,7 +183,7 @@ export const HomePage: React.FC = () => {
 
       {/* METRIC STATISTICS */}
       <section style={{ background: 'rgba(255,255,255,0.3)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)', padding: '50px 0' }}>
-        <div className="luxury-container" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '30px', textAlign: 'center' }}>
+        <div className="luxury-container stats-grid" style={{ textAlign: 'center' }}>
           <div>
             <h3 style={{ fontSize: '36px', fontFamily: 'var(--font-serif)', color: 'var(--text)' }}>99.8%</h3>
             <p style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.15em', color: 'var(--text-muted)', marginTop: '5px' }}>Bio-Active Lipids</p>
@@ -271,7 +271,7 @@ export const HomePage: React.FC = () => {
 
       {/* BRAND STORY & CMS METRICS */}
       <section style={{ padding: '100px 0', background: 'rgba(15, 23, 42, 0.03)', borderTop: '1px solid var(--border)' }}>
-        <div className="luxury-container" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'center' }}>
+        <div className="luxury-container responsive-double-grid">
           <div className="zoom-image-container" style={{ height: '550px', boxShadow: 'var(--glass-shadow)', border: '1px solid var(--border-glass)' }}>
             <img
               src="https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=800&auto=format&fit=crop"
@@ -286,7 +286,7 @@ export const HomePage: React.FC = () => {
             <p style={{ fontSize: '15px', color: 'var(--text-muted)', lineHeight: '1.9' }}>
               {cms.storyContent}
             </p>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', marginTop: '10px' }}>
+            <div className="responsive-double-grid" style={{ gap: '20px', marginTop: '10px' }}>
               <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
                 <Leaf size={20} color="var(--accent-dark)" />
                 <div>
@@ -314,7 +314,7 @@ export const HomePage: React.FC = () => {
             <h2 style={{ fontSize: '38px', fontFamily: 'var(--font-serif)', marginTop: '8px' }}>Skincare Science Essays</h2>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '40px' }}>
+          <div className="responsive-double-grid" style={{ gap: '40px' }}>
             <div className="glass-card" style={{ padding: '30px', display: 'flex', flexDirection: 'column', gap: '20px' }}>
               <span style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--accent-dark)' }}>RITUALS</span>
               <h3 style={{ fontSize: '24px', fontFamily: 'var(--font-serif)' }}>The Art of Layering Skincare for Maximum Active Delivery</h3>

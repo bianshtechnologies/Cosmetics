@@ -81,7 +81,7 @@ export const ProductDetailPage: React.FC = () => {
         </button>
       </div>
 
-      <div className="luxury-container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '60px', alignItems: 'start' }}>
+      <div className="luxury-container detail-grid" style={{ alignItems: 'start' }}>
         {/* Left Interactive Gallery & 360 viewer */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
           {/* Main 360 visual rotator canvas */}
