@@ -5,3 +5,60 @@
   display: flex;
   flex-direction: column;
 }
+
+/* Luxury Floating Back Button Styles */
+.floating-back-button {
+  position: fixed;
+  left: 40px;
+  top: 120px;
+  z-index: 999;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 45px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--text);
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  transition: var(--transition-fast);
+}
+
+[data-theme="dark"] .floating-back-button {
+  background: rgba(15, 23, 42, 0.7);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.floating-back-button:hover {
+  border-color: var(--text);
+  background: var(--text);
+  color: var(--secondary);
+  transform: translateY(-2.5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.floating-back-button:active {
+  transform: translateY(0px);
+}
+
+/* Responsive adjustment for thumb-friendly mobile layouts */
+@media (max-width: 768px) {
+  .floating-back-button {
+    left: 20px;
+    top: auto;
+    bottom: 24px;
+    padding: 12px 24px;
+    font-size: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  }
+}
+

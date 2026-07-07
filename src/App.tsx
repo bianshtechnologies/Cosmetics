@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import { StoreProvider } from './context/StoreContext';
 import { Navbar } from './components/Navbar';
 import { CartDrawer } from './components/CartDrawer';
 import { Footer } from './components/Footer';
 import { SmoothScroll } from './components/SmoothScroll';
+import { ArrowLeft } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 // Pages
 import { HomePage } from './pages/HomePage';
@@ -32,14 +34,34 @@ const ScrollToTop = () => {
 const AppContent = () => {
   const [cartOpen, setCartOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   // Hide Navbar & Footer on Admin Panel & Checkout views to focus the user
   const isMinimalView = location.pathname.startsWith('/admin') || location.pathname.startsWith('/checkout');
+  const showBackButton = location.pathname !== '/';
 
   return (
     <div className="app-viewport">
       {!isMinimalView && <Navbar onCartOpen={() => setCartOpen(true)} />}
       <CartDrawer isOpen={cartOpen} onClose={() => setCartOpen(false)} />
+
+      <AnimatePresence>
+        {showBackButton && (
+          <motion.button
+            key="back-button"
+            initial={{ opacity: 0, x: -15 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -15 }}
+            transition={{ duration: 0.3, ease: 'easeOut' }}
+            onClick={() => navigate(-1)}
+            className="floating-back-button"
+            aria-label="Go Back"
+          >
+            <ArrowLeft size={13} strokeWidth={2.5} />
+            <span>Back</span>
+          </motion.button>
+        )}
+      </AnimatePresence>
 
       <main style={{ flex: 1 }}>
         <Routes>
